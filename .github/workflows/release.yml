@@ -1,0 +1,11 @@
+name: Hexpm Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-to-hex-pm:
+    uses: straw-hat-team/github-actions-workflows/.github/workflows/elixir-hex-publish.yml@master
+    secrets:
+      HEX_API_KEY: ${{ secrets.HEX_API_KEY }}

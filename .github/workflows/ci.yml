@@ -1,0 +1,13 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  qa:
+    uses: straw-hat-team/github-actions-workflows/.github/workflows/elixir-quality-assurance.yml@v1.7.0
